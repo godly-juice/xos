@@ -1,0 +1,181 @@
+/* layout.css - the shell page layout fix (installer welcome, Welcome/login, xOS Home), injected by lumi-shell.js via __xosAddCss.
+   Idea: the bottom of the window is a reserved DOCK band (Home black hole in the middle, Lumi button on the left, sky button on the right).
+   The page scrolls inside the area ABOVE the dock, so no text or button can ever sit under the black hole or the controls, at any scroll position.
+   Sizes use clamp()/min() so a tiny (640x480), huge (4K) or tall-narrow (600x1200) window keeps the same look. */
+:root{--xl-disc:clamp(44px,9vmin,58px);--xl-gap:clamp(6px,2vh,20px);--xl-dock:calc(var(--xl-disc) + var(--xl-gap) * 2)}
+html.xl-shell{height:100%;overflow:hidden}
+html.xl-shell body{height:calc(100% - var(--xl-dock))!important;min-height:0!important;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+/* Home black hole (the canon glue puts it at 58px / 30px; here it follows the dock) */
+html.xl-shell #home,html.xl-shell .home,html.xl-shell .xos-home-disc{width:var(--xl-disc)!important;height:var(--xl-disc)!important;bottom:var(--xl-gap)!important}
+html.xl-shell main{padding-bottom:24px!important;max-width:min(var(--xl-main-max,1160px),100%);box-sizing:border-box;overflow-wrap:break-word}
+html.xl-shell .xsky-fab{bottom:var(--xl-gap)!important;right:max(10px,env(safe-area-inset-right,0px))!important}
+/* the page's own pin/drag of the orb moves the host with a CSS transform; Lumi moves herself (drag + plop), so the host stays put */
+html.xl-shell #orb,html.xl-shell .orb{transform:none!important}
+/* orb size follows the window, never bigger than the page's own size */
+html.xl-shell .orb{width:clamp(64px,15vmin,126px)!important;height:clamp(64px,15vmin,126px)!important;margin-top:clamp(6px,2vh,20px)!important;margin-bottom:clamp(14px,4vh,40px)!important}
+html.xl-shell #orb{width:clamp(60px,13vmin,90px)!important;height:clamp(60px,13vmin,90px)!important;margin:clamp(8px,2.5vh,28px) 0!important}
+html.xl-shell #pin{top:auto;left:auto;position:static;display:inline-block;margin:0 0 10px}
+html.xl-shell h1{overflow-wrap:break-word;max-width:100%}
+html.xl-shell nav#quick a,html.xl-shell .all a{min-width:0;overflow-wrap:anywhere}
+html.xl-shell .actions{flex-wrap:wrap}
+@media (max-height:620px){html.xl-shell h1{margin-top:8px!important;margin-bottom:10px!important}html.xl-shell main{padding-top:20px!important}html.xl-shell .actions{margin:16px 0!important}}
+@media (max-width:420px){html.xl-shell main{padding-left:16px!important;padding-right:16px!important}}
+/* very wide or very tall windows: keep the reading column, centred */
+@media (min-aspect-ratio:21/9){html.xl-shell main{max-width:min(var(--xl-main-max,1160px),80%)}}
+@media (max-aspect-ratio:2/3){html.xl-shell main{padding-top:clamp(20px,4vh,55px)!important}}
+@media (prefers-reduced-motion:reduce){html.xl-shell *{scroll-behavior:auto!important}}
+
+/* Operator Desk theme. Shared with the g37 window controls; geometry above is
+   retained. Exclude high-contrast mode so its existing accessibility colors win. */
+:root {
+  --xos-surface-base: #101519;
+  --xos-surface-raised: #171d23;
+  --xos-surface-hover: #29333c;
+  --xos-field: #141a20;
+  --xos-border: #36424d;
+  --xos-text: #f2f4f6;
+  --xos-muted: #b4bec9;
+  --xos-accent: #efc46c;
+  --xos-accent-ink: #211b11;
+  --xos-radius: 8px;
+  --xos-space-1: 4px;
+  --xos-space-2: 8px;
+  --xos-space-3: 12px;
+  --xos-space-4: 16px;
+  --xos-space-5: 24px;
+  --xos-font: Inter, "Noto Sans", "Segoe UI", sans-serif;
+}
+html.xl-shell:not(.xl-hc) {
+  color-scheme: dark;
+  background: var(--xos-surface-base);
+}
+html.xl-shell:not(.xl-hc) body {
+  background: var(--xos-surface-base) !important;
+  color: var(--xos-text) !important;
+  font-family: var(--xos-font) !important;
+  line-height: 1.55;
+  text-shadow: none;
+  scrollbar-color: var(--xos-border) var(--xos-surface-base);
+}
+html.xl-shell:not(.xl-hc) h1 {
+  color: var(--xos-text) !important;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 650;
+  letter-spacing: -.035em;
+  line-height: 1.12;
+}
+html.xl-shell:not(.xl-hc) h2 {
+  color: var(--xos-text) !important;
+  font-weight: 600;
+  letter-spacing: -.015em;
+  line-height: 1.3;
+}
+html.xl-shell:not(.xl-hc) :is(.sub, .subtitle, .hint, .muted, small, .xl-hint) {
+  color: var(--xos-muted) !important;
+}
+html.xl-shell:not(.xl-hc) a {
+  color: var(--xos-accent);
+  text-underline-offset: .2em;
+}
+html.xl-shell:not(.xl-hc) :is(button, input, select, textarea) {
+  font-family: var(--xos-font) !important;
+  text-shadow: none !important;
+}
+html.xl-shell:not(.xl-hc) button {
+  min-height: max(42px, 2.75em);
+  padding: 10px 16px;
+  border: 1px solid var(--xos-border) !important;
+  border-radius: var(--xos-radius) !important;
+  background: var(--xos-surface-raised) !important;
+  color: var(--xos-text) !important;
+  font-weight: 600;
+  box-shadow: none;
+}
+html.xl-shell:not(.xl-hc) button:hover:not(:disabled) {
+  background: var(--xos-surface-hover) !important;
+  border-color: var(--xos-muted) !important;
+}
+html.xl-shell:not(.xl-hc) :is(button.primary, input[type="submit"]) {
+  background: var(--xos-accent) !important;
+  border-color: var(--xos-accent) !important;
+  color: var(--xos-accent-ink) !important;
+}
+html.xl-shell:not(.xl-hc) button.primary:hover:not(:disabled) {
+  background: #f5d48f !important;
+  border-color: #f5d48f !important;
+}
+html.xl-shell:not(.xl-hc) :is(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]), select, textarea) {
+  min-height: max(44px, 2.75em);
+  padding: 12px 14px;
+  border: 1px solid var(--xos-border) !important;
+  border-radius: var(--xos-radius) !important;
+  background: var(--xos-field) !important;
+  color: var(--xos-text) !important;
+  box-shadow: none !important;
+}
+html.xl-shell:not(.xl-hc) :is(input, textarea)::placeholder {
+  color: var(--xos-muted);
+  opacity: .85;
+}
+html.xl-shell:not(.xl-hc) :is(input[type="checkbox"], input[type="radio"]) {
+  accent-color: var(--xos-accent);
+}
+html.xl-shell:not(.xl-hc) :is(button, a, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--xos-accent) !important;
+  outline-offset: 3px;
+}
+html.xl-shell:not(.xl-hc) :is(button, input, select, textarea):disabled {
+  opacity: .5;
+}
+html.xl-shell:not(.xl-hc) :is(article, .option, nav#quick a, .all a) {
+  border: 1px solid var(--xos-border) !important;
+  border-radius: var(--xos-radius) !important;
+  background: var(--xos-surface-raised) !important;
+  color: var(--xos-text) !important;
+  box-shadow: none;
+}
+html.xl-shell:not(.xl-hc) :is(nav#quick a, .all a):hover {
+  border-color: var(--xos-muted) !important;
+  background: var(--xos-surface-hover) !important;
+}
+html.xl-shell:not(.xl-hc) #xl-menu {
+  padding: var(--xos-space-5) !important;
+  border: 1px solid var(--xos-border) !important;
+  border-radius: 12px !important;
+  background: var(--xos-surface-raised) !important;
+  color: var(--xos-text) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .28) !important;
+}
+html.xl-shell:not(.xl-hc) #xl-menu :is(label, .xl-row) {
+  gap: var(--xos-space-2);
+}
+html.xl-shell:not(.xl-hc) #xl-menu button {
+  padding: 10px 14px !important;
+  border: 1px solid var(--xos-border) !important;
+  border-radius: var(--xos-radius) !important;
+  background: var(--xos-surface-hover) !important;
+  color: var(--xos-text) !important;
+}
+html.xl-shell:not(.xl-hc) #xl-menu button:hover:not(:disabled) {
+  border-color: var(--xos-accent) !important;
+  background: #34414c !important;
+}
+html.xl-shell:not(.xl-hc) #xl-menu :is(select, input[type="text"]) {
+  border-color: var(--xos-border) !important;
+  background: var(--xos-field) !important;
+  color: var(--xos-text) !important;
+}
+html.xl-shell:not(.xl-hc) #xl-menu-btn {
+  border: 1px solid var(--xos-border) !important;
+  border-radius: var(--xos-radius) !important;
+  background: var(--xos-surface-raised) !important;
+  color: var(--xos-text) !important;
+  font-weight: 600 !important;
+}
+html.xl-shell:not(.xl-hc) #xl-bubble {
+  border: 1px solid var(--xos-border) !important;
+  border-radius: 12px !important;
+  background: var(--xos-surface-raised) !important;
+  color: var(--xos-text) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .22);
+}

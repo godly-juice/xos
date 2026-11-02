@@ -1,0 +1,17 @@
+#!/bin/sh
+# xOS worker (runit service, root, nice 19). It only reaches OUT to the hub; nothing listens. Jobs are data only.
+# It signs in with the fix line's device key (read only). Off switch: delete /etc/xos-worker/enabled.
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
+umask 077
+[ -e /etc/xos-worker/enabled ] || exec sleep 300
+# g35: an Update replaces /etc, so a computer may come back without its worker settings: pick them again from what it is
+# (the team box keeps its data in /mnt/profile/teambox and has the helper model on 127.0.0.1:11450; everything else is a laptop/PC).
+if [ ! -s /etc/xos-worker/config.json ]; then
+  mkdir -p /etc/xos-worker
+  # his words 2026-10-24: use every machine to the max - a laptop with more than 12 GB RAM gets the bigger settings (2 slots, 8 threads)
+  mem=$(awk '/MemTotal/{print int($2/1048576)}' /proc/meminfo 2>/dev/null)
+  if [ -d /mnt/profile/teambox ]; then c=teambox; elif [ "${mem:-0}" -gt 12 ]; then c=laptop-big; else c=laptop; fi
+  cp /usr/local/share/xos-worker/config-$c.json /etc/xos-worker/config.json && chmod 644 /etc/xos-worker/config.json
+  echo "xos-worker: no settings after an update - using the $c settings"
+fi
+exec nice -n 19 /usr/bin/env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin HOME=/root LANG=C.UTF-8 /usr/bin/python3 -I -B /usr/local/bin/xos-worker run

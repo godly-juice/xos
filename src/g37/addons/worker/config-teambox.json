@@ -1,0 +1,22 @@
+{
+ "models": [
+  "teambox-helper"
+ ],
+ "backend": "openai",
+ "model_port": 11450,
+ "max_slots": 1,
+ "slots": 1,
+ "threads": 4,
+ "max_load1": 14.0,
+ "min_mem_avail_mb": 8000,
+ "team_sessions_file": "/mnt/profile/teambox/data/sessions.json",
+ "team_quiet_s": 900,
+ "idle_after_s": 300,
+ "idle_after_locked_s": 60,
+ "battery_min_pct": 30,
+ "poll_idle_s": 60,
+ "poll_paused_s": 60,
+ "job_timeout_s": 900,
+ "max_model_gb": 0.0,
+ "verbose": false
+}

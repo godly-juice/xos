@@ -1,0 +1,126 @@
+{
+  "snapshot": "g37-public-beta-source",
+  "source_files": [
+    {
+      "path": "src/g37/apply_g37.py",
+      "bytes": 1694,
+      "sha256": "c12741c80f54577123e3a1edc1c3b57ac2aaf6f90eded071a59b891c789d8f39",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/apply_ball.py",
+      "bytes": 5145,
+      "sha256": "e76f83b2daa75ef32f4bb56af919489fa9956d67eeae1a284881fab5fb204d65",
+      "sanitized": true
+    },
+    {
+      "path": "src/g37/addons/apply_clock.py",
+      "bytes": 11334,
+      "sha256": "8cc4dcb663e1c64a39060cb2db8275d74c8edf5d50ad6b09da1458cbf7001265",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/apply_console.py",
+      "bytes": 5571,
+      "sha256": "4643a85eab572795b5e7d6146959a88160340d96872b402945c4e788d06a7345",
+      "sanitized": true
+    },
+    {
+      "path": "src/g37/addons/apply_lockfix.py",
+      "bytes": 5805,
+      "sha256": "21a49a4c1985907e4d855930241fc74be8a2780a3f9de8b9b819e3fa6adf1fb3",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/apply_stickupdate.py",
+      "bytes": 5255,
+      "sha256": "4b172569f4c0e702252635aad4f39f4801b5d6fbf20c90563c9128377f647ebd",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/apply_winbar.py",
+      "bytes": 2171,
+      "sha256": "0789e0bd0462ff560ce7d07f2d47c72d7e7c22e576df2b1a16b57e2a4018ae2b",
+      "sanitized": true
+    },
+    {
+      "path": "src/g37/addons/apply_worker.py",
+      "bytes": 4020,
+      "sha256": "1ab4d9c83d308a41d7087c217a743175723c70d0f362f61aeda88dbe5341e07e",
+      "sanitized": true
+    },
+    {
+      "path": "src/g37/addons/ball/xos_lumiball.py",
+      "bytes": 37582,
+      "sha256": "1b214879db99410054361f2ca93f6380a94cd3308e70c8e973d820dec5e9b3fd",
+      "sanitized": true
+    },
+    {
+      "path": "src/g37/addons/console/lumi_console.py",
+      "bytes": 38841,
+      "sha256": "e49c72291ec60556b9a38cb6b400aebf27ab6a85ffe467f6e9a806f150e5dea6",
+      "sanitized": true
+    },
+    {
+      "path": "src/g37/addons/winbar/xos-winbar.py",
+      "bytes": 12781,
+      "sha256": "dfe1dd74668619ce85fe95b4c7b31a02ddbf563574e17b0f9996923bdd3dba95",
+      "sanitized": true
+    },
+    {
+      "path": "src/g37/addons/worker/config-default.json",
+      "bytes": 409,
+      "sha256": "5aba92e9b7a8ad864c9a5fdffc807801cf741b8cbf955539aa7de3ff332a8032",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/worker/config-laptop-big.json",
+      "bytes": 315,
+      "sha256": "75d14e9223d7b889369f00341b6e9f91da78898c86febff8d810c5f3555af05a",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/worker/config-laptop.json",
+      "bytes": 409,
+      "sha256": "5aba92e9b7a8ad864c9a5fdffc807801cf741b8cbf955539aa7de3ff332a8032",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/worker/config-teambox.json",
+      "bytes": 443,
+      "sha256": "fbf8c7957a8d1fa3c9e1554397e41b1ae353898c3d0946be7f5954a455df93c7",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/worker/run-model",
+      "bytes": 662,
+      "sha256": "cd4908633930d3759d2b85882761462913810a93e0306ffb5c3be09aee19463d",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/worker/run-worker",
+      "bytes": 1334,
+      "sha256": "4de6516e0fce67ab93918d4f345bc3360d048c64c364a4a3412bd5166d4bd9d8",
+      "sanitized": false
+    },
+    {
+      "path": "src/g37/addons/worker/xos-worker.py",
+      "bytes": 88306,
+      "sha256": "600a704cab7ecbd28326c30de176ebd5b72288502579102a447705b4a30c9b1f",
+      "sanitized": true
+    },
+    {
+      "path": "src/lumi/shell/layout.css",
+      "bytes": 8190,
+      "sha256": "eb30e084a7bb93f7585a472b38608b4c8874751512c17fb932390627d4701d7c",
+      "sanitized": false
+    }
+  ],
+  "validation": {
+    "python_ast_parse_files": 12,
+    "json_parse_files": 4,
+    "native_visual_qa": "not_run",
+    "boot_or_install_validation": "not_run"
+  },
+  "text_format": "UTF-8 LF; empty-line whitespace normalized in apply_clock.py with unchanged AST"
+}

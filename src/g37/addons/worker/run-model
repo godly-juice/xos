@@ -1,0 +1,9 @@
+#!/bin/sh
+# xOS worker's OWN model server (runit service, root -> the sandbox drops to the xos-model account). 127.0.0.1:11435 only.
+# Built from the system's /opt/xos/model-sandbox (imported, not changed); nice 19 so the owner's programs always come first.
+# Lumi's own model service (/etc/service/ollama, 127.0.0.1:11434) is separate and untouched. Off switch: delete /etc/xos-worker/enabled.
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
+umask 022
+[ -e /etc/xos-worker/enabled ] || exec sleep 300
+cd /
+exec nice -n 19 /usr/bin/env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin HOME=/root LANG=C.UTF-8 /usr/bin/python3 -I -B /usr/local/bin/xos-worker model

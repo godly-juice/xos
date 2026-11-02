@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.img
+*.iso
+*.qcow2
+*.secret
+.env
+.env.*

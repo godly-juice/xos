@@ -1,0 +1,17 @@
+{
+ "models": ["phi4-mini:latest"],
+ "model_port": 11435,
+ "max_slots": 4,
+ "slots": 2,
+ "threads": 8,
+ "ctx": 4096,
+ "max_loaded": 3,
+ "idle_after_s": 180,
+ "idle_after_locked_s": 20,
+ "battery_min_pct": 30,
+ "poll_idle_s": 60,
+ "poll_paused_s": 60,
+ "job_timeout_s": 900,
+ "max_model_gb": 8.0,
+ "verbose": false
+}
