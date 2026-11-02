@@ -1,8 +1,26 @@
+<p align="center"><img src="docs/images/xos-g37-signin.png" alt="xOS g37 sign-in: a starfield, the clock, Lumi's orb" width="860"></p>
+
 # xOS · public beta
 
-An experimental desktop with Lumi, a local AI companion.
+**A bootable Linux desktop with Lumi, a local AI that runs on your machine.**
+Try it live from a USB stick. Install only if you want.
 
-**Free bootable beta. Free source access.** Optional $1/month support is planned; payments are not open.
+[**Download the g37 beta**](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) · [Why xOS exists](https://about.xseed.ing/) · [Report an issue](https://github.com/godly-juice/xos/issues)
+
+Free during the beta. An optional $1/month Supporter option is planned; payments are not open.
+
+## Why
+
+I wanted to know what my own computer is doing: every process explained, every byte leaving it accounted for, real off buttons. xOS is built around that rule.
+
+## What you get
+
+- Boots live from a 16 GB USB stick (**Try xOS**). Installing is a separate, explicit choice.
+- Lumi, a local AI companion. The standard build ships Phi-4-mini and runs it on your hardware: no account, no cloud, no API key.
+- A fresh identity on first boot: no personal memory, no device enrollment, developer background work disabled.
+- The g37 add-on source, a package inventory, retained notices, and a `VALIDATION.md` that says which checks were completed and which were not.
+
+Needs an x86-64 PC with 8 GB RAM, or a disposable VM. The image is 5.6 GB, in four parts with checksums.
 
 ## Try xOS
 
