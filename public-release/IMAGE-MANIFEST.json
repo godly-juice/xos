@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "build_id": "g37-public-beta.1",
+  "image": {
+    "name": "xos-g37-public.img",
+    "bytes": 5916852224,
+    "sha256": "cc9825665583951554c85d2a2429f8ebe6fe0b212e9c15f16fcf5b87cf97dce3"
+  },
+  "parts": [
+    {
+      "name": "xos-g37-public.img.part00",
+      "bytes": 1800000000,
+      "sha256": "e7771af1bbbdb94f3cde97193e9df9f802b27c51544ec72fbba460376a5fba71"
+    },
+    {
+      "name": "xos-g37-public.img.part01",
+      "bytes": 1800000000,
+      "sha256": "7ac6b1a3105f97cc0928ea5d8cc4a40bec63563457984058e432635b8cb37c44"
+    },
+    {
+      "name": "xos-g37-public.img.part02",
+      "bytes": 1800000000,
+      "sha256": "dcd9426cdfdbaf22c6d6fac4e4487a35f685290cc1f9e037fa2621e1f4a756d1"
+    },
+    {
+      "name": "xos-g37-public.img.part03",
+      "bytes": 516852224,
+      "sha256": "eafa25a279ec9cb06b363691eb3f7348644823b6f2f79a02f4bc7e6362fc538b"
+    }
+  ],
+  "format": "Raw bootable image split in order; concatenate parts, do not flash a part."
+}

@@ -1,7 +1,11 @@
-# Licensing notice
+# Licensing and distribution notice
 
-This repository is a source-visible beta snapshot. Existing copyright headers and component notices are preserved. No blanket open-source license is being applied to the complete xOS operating system or to third-party components by this publication.
+The [g37-public-beta.1 release](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) is available for free beta access. This repository and release preserve existing copyright headers and component notices. Public availability does not add a blanket open-source, commercial, or redistribution license for the complete xOS distribution.
 
-Public availability on GitHub is not a replacement for a software license. No new general redistribution or commercial license is granted here. Component-specific licenses, where present, continue to apply. The licensing of xOS-authored source is being documented before a broader distribution license is offered.
+Each third-party component retains its own license. Linux, Alpine packages, GTK, Sway, firmware, model software, and other bundled components are governed by their respective terms. The standard Phi-4-mini model assets include Microsoft's MIT notice; that notice applies to those model assets, not automatically to the rest of xOS.
 
-Linux, Alpine, GTK, Sway and other runtime dependencies retain their own licenses; those dependencies are not bundled in this source snapshot. Model weights, firmware, personal data and private website/backend code are also not included. A future bootable distribution must provide the applicable notices and corresponding source obligations for the exact components it contains.
+The bootable release provides retained notices, a package inventory, and an accompanying source archive. Use those records for the exact included component versions and corresponding-source locations. This repository's focused g37 add-on snapshot is not a substitute for the source and notices of every bundled component.
+
+Personal memory, private application data, hosted accounts, credentials, and device enrollment are excluded from the public image. No private website/backend repository is licensed or published by this beta.
+
+No new general license grant for xOS-authored code is invented here. Existing component-specific licenses continue to apply; any broader xOS license will be documented separately. Optional supporter payments are not active and do not change software licensing or beta access.

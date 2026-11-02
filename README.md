@@ -2,30 +2,41 @@
 
 An experimental desktop with Lumi, a local AI companion.
 
-**Free beta. Optional $1/month support.** No subscription is required to view this repository or download the published source.
+**Free bootable beta. Free source access.** Optional $1/month support is planned; payments are not open.
 
-## What you can try today
+## Try xOS
 
-This is the **g37 source beta**: the desktop add-on source and the current UI theme, published for inspection and feedback. It is an add-on snapshot, **not a complete operating-system image or a standalone installer**.
+[Download g37-public-beta.1](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1)
+
+The release contains a split raw disk image, a Windows downloader, checksums, notices, a source archive, and a package inventory. On Windows, download and inspect `Download-xOS.ps1`, then run:
+
+```powershell
+./Download-xOS.ps1 -Directory ./xos-beta
+```
+
+It downloads, verifies, and joins the parts into `xos-g37-public.img`. It does not flash a USB drive or install xOS. See [BETA.md](BETA.md) for manual assembly and testing instructions.
+
+Use an x86-64 PC with at least 8 GB RAM, or a disposable VM. A spare USB drive should be at least 16 GB. Start with **Try xOS**; installation is a separate choice that can erase its selected target.
+
+## What's included
 
 | Item | Status |
 | --- | --- |
-| [g37 add-ons](src/g37/) | Public source snapshot |
-| [Desktop window controls](src/g37/addons/winbar/xos-winbar.py) | Source included; new theme still needs native visual verification |
-| [Legacy shell theme](src/lumi/shell/layout.css) | Source included |
-| [g38 plan](docs/g38-plan.md) | Planned work; not built or released |
-| Bootable public image | Not available yet |
+| g37 desktop and local-model runtime | Public bootable beta |
+| Phi-4-mini | Standard model assets; Microsoft MIT notice included |
+| [g37 add-on source](src/g37/) and [shared shell theme](src/lumi/shell/layout.css) | Published source snapshot |
+| [g38](docs/g38-plan.md) | Planned; not built or released |
 
-The latest local image is g37. It contains private test/profile state, so it is not attached here. A clean image must be rebuilt and tested before a bootable beta download is offered. No g38 image is being advertised.
+The public image starts with a fresh account and machine identity. Personal memory, Canon databases and embeddings, private application/runtime data, hosted accounts, and existing device enrollment are excluded. Background work for the developer's machines and private failover connections are disabled. Services requiring your own backend or credentials need separate configuration.
 
-Read [BETA.md](BETA.md) before testing. Please use [Issues](https://github.com/godly-juice/xos/issues) for bugs and feedback, without passwords, API keys, personal memory exports or private logs.
+Read the release's `VALIDATION.md` for the checks actually completed and the remaining limits. Beta availability is not a promise that every app or physical PC is supported.
 
-## Almost free, on purpose
+## Free beta, optional support
 
-xOS beta access stays **$0**. The optional **$1/month Supporter** offer funds development and has the same published software features as the free beta.
+Beta access is **$0**. The planned **$1/month Supporter** option has the same published software features as the free beta. **There is no active checkout or subscription.** Local AI uses your hardware; third-party APIs or hosted compute are separate. See [PRICING.md](PRICING.md).
 
-Supporter payments are **not open yet**. There is no active checkout or subscription in this repository. Local AI uses your hardware; any third-party API or future hosted compute is separate and is not included in the $1 contribution. See [PRICING.md](PRICING.md).
+## Source, notices, and feedback
 
-## Source and licensing
+This repository contains a focused g37 add-on snapshot, not a complete standalone OS builder. The bootable release also provides a source archive and package inventory. Existing component licenses and notices remain in effect; no blanket license for the complete distribution is added here. See [LICENSE-NOTICE.md](LICENSE-NOTICE.md).
 
-This is a fresh, reviewed publication snapshot. Personal data, private service configuration, model weights and the private website/backend repositories are not included. Existing copyright headers and notices are preserved. Public visibility is not a claim that the complete xOS distribution is open source; see [LICENSE-NOTICE.md](LICENSE-NOTICE.md).
+[Report an issue](https://github.com/godly-juice/xos/issues) with the build ID, what happened, and a small redacted log or screenshot. Keep credentials and personal exports out of reports.
