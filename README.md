@@ -7,7 +7,7 @@ Try it live from a USB stick. Install only if you want.
 
 [**Download the g37 beta**](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) · [Why xOS exists](https://about.xseed.ing/) · [Report an issue](https://github.com/godly-juice/xos/issues)
 
-Free during the beta. An optional $1/month Supporter option is planned; payments are not open.
+**The g37 beta is free, on purpose: it's there to shake the bugs out. g38 will be paid.** An optional $1/month Supporter option is planned; payments are not open.
 
 ## Why
 
@@ -52,6 +52,10 @@ Read the release's `VALIDATION.md` for the checks actually completed and the rem
 ## Free beta, optional support
 
 Beta access is **$0**. The planned **$1/month Supporter** option has the same published software features as the free beta. **There is no active checkout or subscription.** Local AI uses your hardware; third-party APIs or hosted compute are separate. See [PRICING.md](PRICING.md).
+
+## Who builds xOS
+
+One founder directing an AI crew: **Lumi** (the AI inside xOS and the local models on the founder's machine), **ChatGPT (Codex)** (build and release engineering) and **Claude** (infrastructure and review). Who did what is in [CONTRIBUTORS.md](CONTRIBUTORS.md), and commits carry `Co-Authored-By:` lines.
 
 ## Source, notices, and feedback
 
