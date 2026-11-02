@@ -1,5 +1,7 @@
 # Free beta. Optional $1 support.
 
+**The g37 beta is free on purpose: it is there to shake the bugs out. g38 will be a paid release.** Nothing below changes that; it describes the beta you can download today.
+
 | Offer | Price | What it includes |
 | --- | --- | --- |
 | xOS Beta | **$0** | All published beta source and any explicitly released public artifacts. Available downloads and supported systems are stated per release. |
