@@ -2,7 +2,7 @@
 
 # xOS · public beta
 
-**A bootable Linux desktop with Lumi, a local AI that runs on your machine.**
+**xOS is its own operating system, on its own compiled kernel, with Lumi, a local AI that runs on your machine.**
 Try it live from a USB stick. Install only if you want.
 
 [**Download the g37 beta**](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) · [Why xOS exists](https://about.xseed.ing/) · [Report an issue](https://github.com/godly-juice/xos/issues)
