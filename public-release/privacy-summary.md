@@ -1,3 +1,5 @@
+> **WITHDRAWN 2026-11-03.** This summary describes the g37 image as it was checked at the time. A later, stricter check found development-machine data inside that image, which is why it was withdrawn. It is not a clean result.
+
 # g37 public release and privacy summary
 
 This release adds a free bootable g37 beta alongside the published source snapshot. g38 remains planned work. The planned $1/month supporter offer is inactive.

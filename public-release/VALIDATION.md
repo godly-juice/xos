@@ -1,3 +1,5 @@
+> **WITHDRAWN 2026-11-03.** The bootable g37 image described below is no longer published. A later, stricter privacy check found development-machine data inside it that the checks on this page did not catch, so the image parts were removed. The privacy statements below describe what was checked at the time; they are not a clean result. The next beta image will be rebuilt and checked inside every layer before it is posted.
+
 # g37-public-beta.1 validation
 
 Tested on November 1, 2026 (America/Chicago).
