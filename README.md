@@ -5,9 +5,9 @@
 **xOS is its own operating system, on its own compiled kernel, with Lumi, a local AI that runs on your machine.**
 Try it live from a USB stick. Install only if you want.
 
-[**Download the g37 beta**](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) · [Why xOS exists](https://about.xseed.ing/) · [Report an issue](https://github.com/godly-juice/xos/issues)
+[**Get a ready-made xOS stick**](https://xseed.ing/xOS/Hardware) · [Source and notices](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) · [Why xOS exists](https://about.xseed.ing/) · [Report an issue](https://github.com/godly-juice/xos/issues)
 
-**The g37 beta is free, on purpose: it's there to shake the bugs out. g38 will be paid.** An optional $1/month Supporter option is planned; payments are not open.
+**The beta is there to shake the bugs out.** A ready-made stick is $99 (128 GB, up to 400 MB/s read) at [xseed.ing/xOS/Hardware](https://xseed.ing/xOS/Hardware). An optional $1/month Supporter option is planned; payments are not open.
 
 ## Why
 
@@ -20,21 +20,18 @@ I wanted to know what my own computer is doing: every process explained, every b
 - A fresh identity on first boot: no personal memory, no device enrollment, developer background work disabled.
 - The g37 add-on source, a package inventory, retained notices, and a `VALIDATION.md` that says which checks were completed and which were not.
 
-Needs an x86-64 PC with 8 GB RAM, or a disposable VM. The image is 5.6 GB, in four parts with checksums.
+Needs an x86-64 PC with 8 GB RAM, or a disposable VM.
 
 ## Try xOS
 
-[Download g37-public-beta.1](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1)
+> **The bootable g37 image is withdrawn for now.** It was pulled on 2026-11-03 so it can be rebuilt and checked again before anyone boots it. The next beta image will be posted in this repository's releases.
 
-The release contains a split raw disk image, a Windows downloader, checksums, notices, a source archive, and a package inventory. On Windows, download and inspect `Download-xOS.ps1`, then run:
+Until then:
 
-```powershell
-./Download-xOS.ps1 -Directory ./xos-beta
-```
+- **A ready-made stick:** [xseed.ing/xOS/Hardware](https://xseed.ing/xOS/Hardware): $99, 128 GB, up to 400 MB/s read, xOS ready to boot. Reserve one there; no payment is taken until orders open.
+- **The source:** the release [g37-public-beta.1](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) keeps the source archive, the kernel source and configuration, the package inventory, the licences and `VALIDATION.md`.
 
-It downloads, verifies, and joins the parts into `xos-g37-public.img`. It does not flash a USB drive or install xOS. See [BETA.md](BETA.md) for manual assembly and testing instructions.
-
-Use an x86-64 PC with at least 8 GB RAM, or a disposable VM. A spare USB drive should be at least 16 GB. Start with **Try xOS**; installation is a separate choice that can erase its selected target.
+Use an x86-64 PC with at least 8 GB RAM, or a disposable VM. Start with **Try xOS**; installation is a separate choice that can erase its selected target.
 
 ## What's included
 
