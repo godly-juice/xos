@@ -1,27 +1,14 @@
 # g37 public beta
 
-The [g37-public-beta.1 release](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) provides a free experimental bootable image alongside the source snapshot. g38 remains a [plan](docs/g38-plan.md), not a released build.
+The [g37-public-beta.1 release](https://github.com/godly-juice/xos/releases/tag/g37-public-beta.1) keeps the source snapshot, the kernel source and the licence notices. Its bootable image is withdrawn for now (see below). g38 remains a [plan](docs/g38-plan.md), not a released build.
 
 ## Download and assemble
 
-**Windows:** download `Download-xOS.ps1` from the release, inspect it, and run:
+> **The bootable g37 image is withdrawn for now.** It was pulled on 2026-11-03 so it can be rebuilt and checked again before anyone boots it. The image parts, `Download-xOS.ps1`, `IMAGE-MANIFEST.json` and `SHA256SUMS` are no longer in the release, so there is nothing to download or assemble yet. The next beta image will be posted in this repository's releases.
 
-```powershell
-./Download-xOS.ps1 -Directory ./xos-beta
-```
+A ready-made stick is available instead: [xseed.ing/xOS/Hardware](https://xseed.ing/xOS/Hardware) ($99, 128 GB, up to 400 MB/s read, xOS ready to boot). Reserve one there; no payment is taken until orders open.
 
-The script verifies each part, joins them, and verifies the complete `xos-g37-public.img`. It creates files only in its output directory. It does not select a USB drive, flash media, or install the operating system.
-
-**Manual download:** obtain every `xos-g37-public.img.partNN` file, `IMAGE-MANIFEST.json`, and `SHA256SUMS` from the same release. Join the parts in numerical order. On Linux:
-
-```sh
-sha256sum --check SHA256SUMS --ignore-missing
-cat xos-g37-public.img.part[0-9][0-9] > xos-g37-public.img
-sha256sum --check SHA256SUMS
-```
-
-Use the assembled `.img`, never an individual part. Allow space for both the parts and the completed image; `IMAGE-MANIFEST.json` gives the exact sizes.
-
+If you already downloaded the g37 image, please wait for the rebuilt one instead of booting it.
 ## Try first
 
 Use a disposable VM or a spare USB drive of at least 16 GB. Flashing erases the selected USB drive. Choose **Try xOS** before considering installation; installing can erase its selected target disk. Keep backups and use a spare disk for beta testing.
